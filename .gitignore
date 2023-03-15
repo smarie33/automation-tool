@@ -102,3 +102,13 @@ dist
 
 # TernJS port file
 .tern-port
+
+#keys and stuff
+data/*
+public/images/*
+public/kept-zips/*
+public/temp/*
+public/text/*
+public/toDownload/*
+public/trello/*
+public/zip-upload/*
