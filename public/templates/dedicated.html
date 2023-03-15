@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>[DATE DASH] [NAME 1] HPTO</title>
+		<style>
+		* {
+		   margin: 0px;
+		   padding: 0px;
+		}
+
+        .container {
+  		position: absolute;
+  		background-image: url('bgkd.jpg');
+  		width: 800px;
+  		height: 235px;
+		}
+
+     	 .bg-link {
+ 		 position: absolute;
+ 		 top:0;
+  		 left:0;
+  		 bottom:0;
+  		 right:0;
+		}
+
+		</style>
+	</head>
+	<body>
+
+		<!-- Banner -->
+  		<div>
+  		<div class="container">
+		 <a href="[URI]" class="bg-link" onclick=" ga('send', 'event', 'click', '[NAME 2] [DATE]');"></a>
+     	  </div>
+	    </div>
+
+		<!-- GA TAG -->
+		<script>
+
+  		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  		})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+			ga('create', 'UA-75422371-3', {cookieFlags: 'secure;samesite=none'});
+  		ga('send', 'pageview');
+
+		</script>
+
+	</body>
+</html>

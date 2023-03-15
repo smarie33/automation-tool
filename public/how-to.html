@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HPTO CREATION HELPER - How To</title>
+    <link rel="stylesheet" href="/stylesheets/style-forCoder.css">
+  </head>
+  <body id="how-to">
+    <section>
+      <h1>Download app</h1>
+      <ol>
+        <li>Download app from Box <a href="xxx">xxx</a> </li>
+        <li>If you need administrative cridentials to install please use them</li>
+      </ol>
+    </section>
+    <section>
+      <h1>Set Up: Authorize Google Sheets</h1>
+      <ol>
+        <li>Go to your sheet in google</li>
+        <li>click the share button</li>
+        <li>add the email <span class="email">hpto-node@hpto-1617047136949.iam.gserviceaccount.com</span></li>
+        <li>Give the email editor capabilities</li>
+        <li>check send an email and save the share</li>
+      </ol>
+    </section>
+    <section>
+      <h1>Set Up: Add Google Sheets</h1>
+      <ol>
+        <li>Go to your sheet in google</li>
+        <li>Copy/paste the sheet id (between "d/" and "/edit") into the sheet field under Settings</li>
+        <li>Select save</li>
+      </ol>
+    </section>
+    <section>
+      <h1>API: Endpoints</h1>
+      <ul>
+        <li>Current endpoints include:</li>
+          <ul>
+            <li>api</li>
+            <li>api/titles</li>
+            <li>api/date or api/dates</li>
+              <ul>
+                <li>api/date/month</li>
+                <li>api/date/month/day</li>
+                <li>api/date/month/day/year</li>
+              </ul>
+            <li>api/dedicateds</li>
+            <li>api/database</li>
+            <li>api/sheetinfo</li>
+            <li>csvinfo</li>
+            <li>csvinfo/titles</li>
+            <li>csvinfo/date or api/dates</li>
+              <ul>
+                <li>csvinfo/date/month</li>
+                <li>csvinfo/date/month/day</li>
+                <li>csvinfo/date/month/day/year</li>
+              </ul>
+            <li>refresh</li>
+            <li>refresh/id</li>
+            <li>checkzips</li>
+            <li>zipnames</li>
+            <li>zipnames/id</li>
+            <li>zipname</li>
+            <li>zipname/id</li>
+            <li>csvnames</li>
+            <li>csvnames/id</li>
+            <li>csv</li>
+            <li>function/id (internal)</li>
+            <li>trello/id (internal)</li>
+          </ul>
+      </ul>
+      <ul>
+        <li>api</li>
+        <ul>
+          <li>Returns all of the cells requested</li>
+        </ul>
+      </ul>
+      <ul>
+        <li>api/titles</li>
+        <ul>
+          <li>Returns the first row from the googlesheet, (usually the titles)</li>
+        </ul>
+      </ul>
+      <ul>
+        <li>api/date or api/dates</li>
+        <ul>
+          <li>Return dates of all the dayparts with no duplicates</li>
+        </ul>
+      </ul>
+      <ul>
+        <li>api/date/[month]</li>
+        <ul>
+          <li>Return the dayparts with the associated month, no duplicates</li>
+        </ul>
+      </ul>
+      <ul>
+        <li>api/date/[month]/[day]</li>
+        <ul>
+          <li>Return the dayparts with the associated month and day, no duplicates</li>
+        </ul>
+      </ul>
+      <ul>
+        <li>api/date/[month]/[day]/[year]</li>
+        <ul>
+          <li>Return the dayparts with the associated month, day and year, no duplicates</li>
+        </ul>
+      </ul>
+      <ul>
+        <li>csvinfo</li>
+        <ul>
+          <li>Returns all of the cells requested</li>
+        </ul>
+      </ul>
+      <ul>
+        <li>csvinfo/titles</li>
+        <ul>
+          <li>Returns the first row from the googlesheet, (usually the titles)</li>
+        </ul>
+      </ul>
+      <ul>
+        <li>csvinfo/date or api/dates</li>
+        <ul>
+          <li>Return dates of all the dayparts with no duplicates</li>
+        </ul>
+      </ul>
+      <ul>
+        <li>csvinfo/date/[month]</li>
+        <ul>
+          <li>Return the dayparts with the associated month, no duplicates</li>
+        </ul>
+      </ul>
+      <ul>
+        <li>csvinfo/date/[month]/[day]</li>
+        <ul>
+          <li>Return the dayparts with the associated month and day, no duplicates</li>
+        </ul>
+      </ul>
+      <ul>
+        <li>csvinfo/date/[month]/[day]/[year]</li>
+        <ul>
+          <li>Return dayparts with the associated month, day and year, no duplicates</li>
+        </ul>
+      </ul>
+      <ul>
+        <li>refresh</li>
+        <ul>
+          <li>Returns new sheet data from currently loaded sheet</li>
+        </ul>
+      </ul>
+      <ul>
+        <li>refresh/[id]</li>
+        <ul>
+          <li>Returns new sheet's data</li>
+        </ul>
+      </ul>
+      <ul>
+        <li>checkzips</li>
+        <ul>
+          <li>Get list of all zips including extentions</li>
+        </ul>
+      </ul>
+      <ul>
+        <li>zipname</li>
+        <ul>
+          <li>Get list of all zip names, no extentions</li>
+        </ul>
+      </ul>
+      <ul>
+        <li>zipname/[zipName]</li>
+        <ul>
+          <li>Check if zip exists, returns empty string if doesnt exist</li>
+        </ul>
+      </ul>
+      <ul>
+        <li>zipnames</li>
+        <ul>
+          <li>Get list of all zip names, no extentions</li>
+        </ul>
+      </ul>
+      <ul>
+        <li>zipnames/[zipName]</li>
+        <ul>
+          <li>Check if zip exists, returns empty string if doesnt exist</li>
+        </ul>
+      </ul>
+      <ul>
+        <li>csvnames</li>
+        <ul>
+          <li>Get list of csvs</li>
+        </ul>
+      </ul>
+      <ul>
+        <li>csvnames/[csvName]</li>
+        <ul>
+          <li>Check if csv exists, returns empty string if doesnt exist</li>
+        </ul>
+      </ul>
+      <ul>
+        <li>csv (internal)</li>
+        <ul>
+          <li>Upload csv for reading/saving via the frontend</li>
+        </ul>
+      </ul>
+      <ul>
+        <li>function/[functionName] (internal)</li>
+        <ul>
+          <li>Run functions that return data from backend</li>
+          <li>Run functions that output content</li>
+        </ul>
+      </ul>
+      <ul>
+        <li>trello/[documentName] (internal)</li>
+        <ul>
+          <li>Download trello json</li>
+          <li>Add to trello folder</li>
+          <li>Use name of trello json file as documentName</li>
+          <li>gives list of call cards in their respective lanes</li>
+        </ul>
+      </ul>
+    </section>
+    <section>
+      <h1>Errors</h1>
+      <ul>
+        <li>Unable to parse range...</li>
+        <ul>
+          <li>Your tab title maybe incorrectly spelled in the database</li>
+          <li>some times the wrong tab from the wrong sheet is saved in the defaults
+            <ol>
+              <li>Go to your sheet in google</li>
+              <li>copy the name of the tab you wish to view</li>
+              <li>go to settings in the app (cog in the top left)</li>
+              <li>add your tab name in the tab area</li>
+              <li>click submit</li>
+            </ol>
+          </li>
+          <li>The tab in the default does not exist in the sheet
+            <ol>
+              <li>Copy/paste a different tab name into the defaults</li>
+              <li>go to settings in the app (cog in the top left) and paste the tab name</li>
+              <li>click submit</li>
+              <li>OR add a tab by the same name to your sheet</li>
+              <li>OR change the name of a tab in your sheet to the name in the defaults</li>
+            </ol>
+          </li>
+        </ul>
+      <li>The caller does not have permission
+        <ul>
+          <li>The app does not have permission to read your sheet
+            <ol>
+              <li>Go to your sheet in google</li>
+              <li>click the share button</li>
+              <li>add the email <span class="email">hpto-node@hpto-1617047136949.iam.gserviceaccount.com</span></li>
+              <li>Give the email editor capabilities</li>
+              <li>check send an email and save the share</li>
+            </ol>
+          </li>
+        </ul>
+      </li>
+      </ul>
+    </section>
+  </body>
+
+</html>

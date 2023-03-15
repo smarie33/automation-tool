@@ -1,0 +1,8 @@
+body, html {
+  background-color: #f8f9fa;
+}
+
+body > .container, body > .container-fluid {
+  padding: 80px 15px 0;
+  background-color: #f8f9fa;
+}

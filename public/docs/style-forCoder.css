@@ -1,0 +1,720 @@
+* {
+ margin: 0px;
+ padding: 0px;
+}
+
+body {
+  width: 800px;
+  height: 235px;
+  background-color:#000000;
+}
+
+.main{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+/* Container **/
+.container {
+  position: relative;
+  font-size: 0;
+  padding: 0;
+  background-image: url('images/bkgd.png'); /* here becasue there is no actual hover images but we need one */
+  background-repeat: no-repeat;
+  width: 800px;
+  height: 235px;
+}
+
+
+.slide {
+  position: absolute;
+  width: 800px;
+  display: none;
+}
+
+.slide.empty-link a{
+  width: 800px;
+  height: 235px;
+}
+
+.slide.single-imgs .album-thumbnail{
+  width: 800px;
+  height: 235px;
+}
+
+.slide.single-imgs .album-thumbnail:last-of-type{
+  width: 800px;
+  height: 235px;
+}
+
+.slide.single-imgs .album-container{
+  margin: 0;
+}
+
+.slide.single-imgs .album-set{
+  margin-top: 0;
+}
+
+.slide .album-thumbnail:first-of-type,
+.slide .album-thumbnail:last-of-type{
+  height: 150px;
+  width: 150px;
+}
+
+.slide.three-up .album-container:nth-of-type(3) .album-thumbnail{
+  height: 150px;
+  width: 150px;
+}
+
+.slide.three-up .album-container:first-of-type .album-artist,
+.slide.three-up .album-container:last-of-type .album-artist{
+  padding: 10px 0;
+}
+
+.slide .album-container:nth-of-type(2) .album-thumbnail,
+.slide .album-container:nth-of-type(3) .album-thumbnail{
+  height: 180px;
+  width: 180px;
+}
+
+.slide.one-line-text-under .album-container,
+.slide.one-line-lrg-images .album-container:first-of-type,
+.slide.one-line-lrg-images .album-container:last-of-type{
+  height: 150px;
+}
+
+.slide.slightly-larger-center-imgs .album-container:nth-of-type(2),
+.slide.slightly-larger-center-imgs .album-container:nth-of-type(3){
+    height: 175px;
+    margin: -30px 10px 10px 10px;
+}
+
+.slide.slightly-larger-center-imgs .album-container:nth-of-type(2) .album-thumbnail,
+.slide.slightly-larger-center-imgs .album-container:nth-of-type(3) .album-thumbnail{
+  height: 175px;
+  width: 175px;
+}
+
+.slide.one-line-text-under .album-container .album-thumbnail,
+.slide.one-line-lrg-images .album-container:first-of-type .album-thumbnail,
+.slide.one-line-lrg-images .album-container:last-of-type .album-thumbnail{
+  height: 150px;
+  width: 150px;
+}
+
+.slide.one-line-lrg-images .album-container{
+  height: 180px;
+  margin: 0 10px;
+}
+
+
+.slide.one-line-lrg-images .album-container .album-thumbnail{
+  height: 180px;
+  width: 180px;
+}
+
+.slide.no-lines-larger-imgs .album-thumbnail:first-of-type,
+.slide.no-lines-larger-imgs .album-thumbnail:last-of-type{
+  height: 170px;
+  width: 170px;
+}
+
+.slide.no-lines-larger-imgs .album-container:nth-of-type(2) .album-thumbnail,
+.slide.no-lines-larger-imgs .album-container:nth-of-type(3) .album-thumbnail{
+  height: 190px;
+  width: 190px;
+}
+
+.size-150{
+  height: 150px !important;
+  width: 150px !important;
+}
+
+.content {
+
+}
+
+.bg-link {
+  position: absolute;
+  top:0;
+  left:0;
+  bottom:0;
+  right:0;
+}
+
+/* Headline */
+.headline {
+  color: white;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 17px;
+  padding-top: 6px;
+  font-weight: 600;
+  letter-spacing: .7px;
+  font-family: Helvetica;
+  pointer-events: none;
+}
+
+.container.dayparts .hover-text.no-headline .headline{
+  font-size: 9px;
+}
+
+/** Headline Hashtag **/
+.headline-hashtag {
+  font-size: 17px;
+  font-weight: 400;
+  letter-spacing: .5px;
+  text-transform: initial;
+}
+
+/** Album Set **/
+.album-set {
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 1px;
+  display: flex;
+}
+
+
+/** Album Container **/
+.album-container {
+  position: relative;
+  text-align: center;
+  margin: 10px;
+}
+
+
+.album-container:hover .listen-now {
+  opacity: 1;
+  background: url('images/overlay.png'); /* here becasue there is no actual hover images but we need one */
+  width: 160px;
+  height: 160px;
+}
+
+
+.listen-now {
+  opacity: 0;
+  position: absolute;
+  background-color: black;
+}
+
+
+/** Featuring Text **/
+.featuring-text {
+  padding-top: 7px;
+  color: white;
+  font-size: 11px;
+  font-family: Helvetica;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: .5px;
+  text-align: center;
+}
+
+/** Album Artist **/
+.album-artist {
+  color: white;
+  font-size: 11px;
+  font-family: Helvetica;
+  font-weight: 500;
+  text-align: center;
+  letter-spacing: .6px;
+
+}
+.album-artist2 {
+  color: white;
+  font-size: 11px;
+  font-family: Helvetica;
+  font-weight: 500;
+  text-align: center;
+  letter-spacing: .6px;
+  width: 160px;
+
+}
+
+.slide.animated-imgs .content{
+  position: relative;
+  height: 100%;
+}
+
+.slide.animated-imgs .album-set{
+  height: 100%;
+}
+
+.slide.animated-imgs .album-container{
+  position: relative;
+  height: 100%;
+}
+
+.slide.animated-imgs .album-container:nth-of-type(1), .slide.animated-imgs .album-container:nth-of-type(4){
+  width: 150px;
+}
+
+.slide.animated-imgs .album-container:nth-of-type(2), .slide.animated-imgs .album-container:nth-of-type(3){
+  width: 180px;
+}
+
+.slide.animated-imgs .album-container img{
+  left: 0;
+  position: absolute;
+  transform-origin: center center;
+}
+
+.slide.animated-imgs .album-container:nth-of-type(1) img, .slide.animated-imgs .album-container:nth-of-type(4) img{
+  top: 30px;
+}
+
+.slide.animated-imgs .album-container:nth-of-type(2) img, .slide.animated-imgs .album-container:nth-of-type(3) img{
+  top: 10px;
+}
+
+.slide.animated-imgs .featuring-text{
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+}
+
+.slide.animated-imgs .album-artist{
+  position: absolute;
+    bottom: 5px;
+    width: 100%;
+}
+
+.slide.animated-imgs .album-container a{
+  width: 100%;
+  height: 100%;
+  left:0;
+  position: absolute;
+  z-index: 10;
+}
+
+@keyframes breath-1st {
+  0 {transform: scale(1)}
+  12.5% {transform: scale(1.1)}
+  25% {transform: scale(1)}
+}
+
+@keyframes breath-2nd {
+  0 {transform: scale(1)}
+  12.5% {transform: scale(1.1)}
+  25% {transform: scale(1)}
+}
+
+@keyframes breath-3rd {
+  0 {transform: scale(1)}
+  12.5% {transform: scale(1.1)}
+  25% {transform: scale(1)}
+}
+
+@keyframes breath-4th {
+  0 {transform: scale(1)}
+  12.5% {transform: scale(1.1)}
+  25% {transform: scale(1)}
+}
+
+.slide.animated-imgs .album-container:nth-of-type(1) img{
+  position: absolute;
+  left: 0;
+  transform-origin: center center;
+  animation: breath-1st 8s ease-in-out 0s infinite;
+}
+.slide.animated-imgs .album-container:nth-of-type(2) img{
+  animation: breath-2nd 8s ease-in-out 2s infinite;
+}
+.slide.animated-imgs .album-container:nth-of-type(3) img{
+  animation: breath-3rd 8s ease-in-out 4s infinite;
+}
+.slide.animated-imgs .album-container:nth-of-type(4) img{
+  animation: breath-4th 8s ease-in-out 6s infinite;
+}
+
+
+.play-btn .album-container a{
+  position: relative;
+  z-index: 20;
+}
+.play-btn .album-container:nth-of-type(1), .play-btn .album-container:nth-of-type(4){
+  width: 150px;
+  height: 150px;
+}
+
+.play-btn .album-container:nth-of-type(2), .play-btn .album-container:nth-of-type(3){
+  width: 180px;
+  height: 180px;
+}
+
+.play-btn .album-container .album-thumbnail{
+  background: center/100% no-repeat;
+  transition: all 0.5s ease;
+  height: 100%;
+}
+
+.play-btn .album-container:nth-of-type(1):hover .album-thumbnail, .play-btn .album-container:nth-of-type(4):hover .album-thumbnail{
+  background-size: 120% !important;
+}
+
+
+.play-btn .album-container:nth-of-type(2):hover .album-thumbnail, .play-btn .album-container:nth-of-type(3):hover .album-thumbnail{
+  background-size: 120% !important;
+}
+
+.play-btn .symbol{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 10;
+  background: url(images/play-btn.svg) center center no-repeat;
+  background-size: 40%;
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+
+.play-btn .album-container:hover .symbol{
+  opacity: 1;
+}
+
+@keyframes glow-1st {
+  0 {box-shadow: 0px 0px 15px rgb(255, 255, 255, 0)}
+  12.5% {box-shadow: 0px 0px 15px rgb(255, 255, 255, 1)}
+  25% {box-shadow: 0px 0px 15px rgb(255, 255, 255, 0)}
+}
+
+@keyframes glow-2nd {
+  0 {box-shadow: 0px 0px 15px rgb(255, 255, 255, 0)}
+  12.5% {box-shadow: 0px 0px 15px rgb(255, 255, 255, 1)}
+  25% {box-shadow: 0px 0px 15px rgb(255, 255, 255, 0)}
+}
+
+@keyframes glow-3rd {
+  0 {box-shadow: 0px 0px 15px rgb(255, 255, 255, 0)}
+  12.5% {box-shadow: 0px 0px 15px rgb(255, 255, 255, 1)}
+  25% {box-shadow: 0px 0px 15px rgb(255, 255, 255, 0)}
+}
+
+@keyframes glow-4th {
+  0 {box-shadow: 0px 0px 15px rgb(255, 255, 255, 0)}
+  12.5% {box-shadow: 0px 0px 15px rgb(255, 255, 255, 1)}
+  25% {box-shadow: 0px 0px 15px rgb(255, 255, 255, 0)}
+}
+
+.slide.glow .album-container:nth-of-type(1) img{
+  box-shadow: 0px 0px 15px rgb(255, 255, 255, 0);
+  animation: glow-1st 8s ease-in-out 0s infinite;
+}
+.slide.glow .album-container:nth-of-type(2) img{
+  box-shadow: 0px 0px 15px rgb(255, 255, 255, 0);
+  animation: glow-2nd 8s ease-in-out 2s infinite;
+}
+.slide.glow .album-container:nth-of-type(3) img{
+  box-shadow: 0px 0px 15px rgb(255, 255, 255, 0);
+  animation: glow-3rd 8s ease-in-out 4s infinite;
+}
+.slide.glow .album-container:nth-of-type(4) img{
+  box-shadow: 0px 0px 15px rgb(255, 255, 255, 0);
+  animation: glow-4th 8s ease-in-out 6s infinite;
+}
+
+.slide.same-size .album-thumbnail:first-of-type, .slide.same-size .album-thumbnail:last-of-type {
+    height: 180px;
+    width: 180px;
+}
+
+.slide.carousel .content{
+  /* width: 800px; */
+  width: 180px;
+  height: 235px;
+  position: relative;
+  perspective: 1000px;
+  margin-left: 250px;
+
+}
+
+.slide.carousel .content .album-set{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transform-style: preserve-3d;
+  left: 35%;
+  top: 17px;
+  transform: translateZ(-288px);
+  transition: transform 1s;
+}
+
+.slide.carousel .content .album-set .album-container{
+  position: absolute;
+  width: 180px;
+  height: 160px;
+  left: 10px;
+  top: 10px;
+}
+
+.slide.carousel .content .album-set .album-container.back{
+  opacity: .4;
+}
+
+.slide.carousel .content .album-set .album-container a{
+  display: block;
+  z-index: 30;
+  width: 120px;
+  height: 120px;
+  position: absolute;
+}
+
+.slide.carousel .content .album-set .album-container.front{
+  opacity: 1;
+}
+
+.slide.carousel .backing, .slide.carousel .album-thumbnail, .slide.carousel .album-thumbnail:first-of-type, .slide.carousel .album-thumbnail:last-of-type {
+    height: 120px;
+    width: 120px;
+    z-index: 20;
+    position: relative;
+}
+.slide.carousel .backing{
+  position: absolute;
+  z-index: 5;
+  top: 0;
+  left: 30px;
+}
+.slide.carousel .word-holder{
+  z-index: 2;
+  position: relative;
+}
+.slide.carousel .back .black-backing{
+  z-index: 5;
+}
+.slide.carousel .black-backing{
+  position: absolute;
+  z-index: 0;
+  height: 50px;
+  width: 100%;
+  bottom: 0;
+  background-color: black;
+}
+
+.slide.carousel .featuring-text, .slide.carousel .album-artist, .slide.carousel .album-artist2{
+  background: black;
+}
+
+.slide.carousel .album-container.back .backing{
+  z-index: 25;
+}
+
+.slide.slider{
+  overflow: hidden;
+}
+
+.slide.slider .album-thumbnail:first-of-type, .slide.slider .album-thumbnail:last-of-type {
+    height: 180px;
+    width: 180px;
+}
+
+.slide.slider .album-container {
+  margin: 10px 5px;
+}
+
+.slide.slider{
+  position: relative;
+}
+
+.slider .content{
+  position: absolute;
+  left: -170px;
+  transition: left 0.8s ease-in-out;
+}
+
+.slide.hover-text .album-container .overlay{
+  box-shadow: 0px 0px 15px rgb(255, 255, 255, 0);
+  opacity: 0;
+  transition: all 0.8s ease-in-out;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  height: 100%;
+  width: 100%;
+  flex-direction: column;
+  background-color: rgb(0, 0, 0, .8);
+  cursor: pointer;
+}
+
+.slide.hover-text .album-container:hover .overlay{
+  opacity: 1;
+}
+
+.slide.hover-text .album-container img{
+  box-shadow: 0px 0px 15px rgb(255, 255, 255, 0);
+  transition: all 0.8s ease-in-out;
+}
+
+.slide.hover-text .album-container:hover img{
+  box-shadow: 0px 0px 15px rgb(255, 255, 255, 1);
+}
+
+.slide.hover-text .album-thumbnail:first-of-type, .slide.hover-text .album-thumbnail:last-of-type {
+  height: 180px;
+  width: 180px;
+}
+
+.slide.hover-text .album-container .overlay{
+  opacity: 0;
+  transition: all 0.8s ease-in-out;
+}
+
+.slide.hover-text .album-container:hover .overlay{
+  opacity: 1;
+}
+
+.slide.one-image-text .album-container .album-info{
+  display: flex;
+  flex-direction: row;
+}
+
+.slide.one-image-text .album-thumbnail, .slide.one-image-text .img{
+  height: 215px;
+  width: 215px;
+}
+
+.slide.one-image-text .featuring-text, .slide.one-image-text .featuring-text2{
+  font-size: 17px;
+  text-align: left;
+  font-weight: bold;
+}
+
+.slide.one-image-text .album-artist, .slide.one-image-text .album-artist2{
+  text-align: left;
+}
+
+.slide.one-image-text .img{
+  cursor: pointer;
+}
+
+.slide.one-image-text .img .listen-now{
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  font-weight: bold;
+  opacity: 0;
+  transition: all 0.8s ease-in-out;
+  position: absolute;
+  position: absolute;
+  z-index: 10;
+  height: 215px;
+  width: 215px;
+  background: transparent;
+  color: white;
+  font-size: 17px;
+  top: 40%;
+}
+
+.slide.one-image-text .img .overlay{
+  opacity: 0;
+  transition: all 0.8s ease-in-out;
+  position: absolute;
+  height: 215px;
+  width: 215px;
+  z-index: 5;
+  background-color: black;
+}
+.slide.one-image-text .img:hover .listen-now{
+  opacity: 1;
+}
+.slide.one-image-text .img:hover .overlay{
+  opacity: .7;
+}
+
+.slide.one-image-text .album-container .info{
+  flex-basis: 60%;
+  padding-left: 20px;
+}
+
+.slide.hover-text .album-container:hover .overlay{
+  opacity: 1;
+}
+
+.slide.hover-text .album-container img{
+  box-shadow: 0px 0px 15px rgb(255, 255, 255, 0);
+  transition: all 0.8s ease-in-out;
+}
+
+.slide.hover-text .album-container:hover img{
+  box-shadow: 0px 0px 15px rgb(255, 255, 255, 1);
+}
+
+.slide.hover-text .album-thumbnail:first-of-type, .slide.hover-text .album-thumbnail:last-of-type {
+  height: 180px;
+  width: 180px;
+}
+
+.slide.hover-text .album-container .overlay{
+  opacity: 0;
+  transition: all 0.8s ease-in-out;
+}
+
+.slide.hover-text .album-container:hover .overlay{
+  opacity: 1;
+}
+
+.slide.one-image-text .album-container .album-info{
+  display: flex;
+  flex-direction: row;
+}
+
+.slide.one-image-text .album-thumbnail, .slide.one-image-text .img{
+  height: 215px;
+  width: 215px;
+}
+
+.slide.one-image-text .featuring-text, .slide.one-image-text .featuring-text2{
+  font-size: 17px;
+  text-align: left;
+  font-weight: bold;
+}
+
+.slide.one-image-text .album-artist, .slide.one-image-text .album-artist2{
+  text-align: left;
+}
+
+.slide.one-image-text .img{
+  cursor: pointer;
+}
+
+.slide.one-image-text .img .listen-now{
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  font-weight: bold;
+  opacity: 0;
+  transition: all 0.8s ease-in-out;
+  position: absolute;
+  position: absolute;
+  z-index: 10;
+  height: 215px;
+  width: 215px;
+  background: transparent;
+  color: white;
+  font-size: 17px;
+  top: 40%;
+}
+
+.slide.one-image-text .img .overlay{
+  opacity: 0;
+  transition: all 0.8s ease-in-out;
+  position: absolute;
+  height: 215px;
+  width: 215px;
+  z-index: 5;
+  background-color: black;
+}
+.slide.one-image-text .img:hover .listen-now{
+  opacity: 1;
+}
+.slide.one-image-text .img:hover .overlay{
+  opacity: .7;
+}
+
+.slide.one-image-text .album-container .info{
+  flex-basis: 60%;
+  padding-left: 20px;
+}

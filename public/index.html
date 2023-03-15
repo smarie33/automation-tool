@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HPTO CREATION HELPER</title>
+    <meta http-equiv="Cache-control" content="no-store">
+    <meta http-equiv="Cache-control" content="must-revalidate">
+    <meta http-equiv="Cache-control" content="no-cache">
+    <script src = './app.js'></script>
+    <link rel="stylesheet" href="/stylesheets/style-forCoder.css">
+    <link rel="stylesheet" href="/stylesheets/croppie.css" />
+  </head>
+  <body>
+    <div id="msg" class="hide">
+      <div class="close">x</div>
+      <span></span>
+    </div>
+    <div id="popup-zips" class="popup-zips popup hide">
+      <div class="info">
+        <div class="close">x</div>
+        <div class="zips-holder">
+        </div>
+      </div>
+    </div>
+    <div id="popup-csv" class="popup-csv popup hide">
+      <div class="info">
+        <div class="close">x</div>
+        <div class="csvs-holder">
+        </div>
+      </div>
+    </div>
+    <div id="popup-crop" class="popup-crop popup hide">
+      <div class="info">
+        <div class="close">x</div>
+        <a class="blue crop_image" data-tocrop="">Crop Image</a>
+        <div class="image-holder">
+        </div>
+      </div>
+    </div>
+    <div id="popup-settings" class="popup-settings popup hide">
+      <div class="info">
+        <div class="close">x</div>
+        <div class="words">
+          <form class="settings-form" onsubmit="event.preventDefault(); save_defaults()">
+            <label for="">Start with a:</lable>
+              <br/><br/>
+            <div class="radioBtns">
+              <input type="radio" name="start_type" id="csv" value="csv"> CSVs
+              <input type="radio" name="start_type" id="sheet" value="sheet"> Sheet
+            </div>
+              <br/><br/>
+            <label for="">Download completed copies to</label>
+              <br/><br/>
+            <input type="text" name="default_path" value="" placeholder="toDownload/">
+              <br/><br/><br/>
+            <label for="">Default sheet</label>
+              <br/><br/>
+            <input type="text" name="sheet">
+              <br/><br/><br/>
+            <label for="">Default tab</label>
+              <br/><br/>
+            <input type="text" name="tab">
+              <br/><br/><br/>
+            <label for="">Default range</label>
+              <br/><br/>
+            <input type="text" name="range">
+              <br/><br/><br/>
+            <label for="">Output files</label>
+              <br/><br/>
+            <input type="text" name="outputfiles">
+              <br/><br/><br/>
+            <label for="">Store CSVs</label>
+              <br/><br/>
+            <input type="text" name="storecsvs">
+              <br/><br/><br/>
+            <label for="">Finalized Images</label>
+              <br/><br/>
+            <input type="text" name="imagesfolder">
+              <br/><br/><br/>
+            <label for="">Saved Zips</label>
+              <br/><br/>
+            <input type="text" name="savedzips">
+              <br/><br/><br/>
+            <label for="">Temporary Folder</label>
+              <br/><br/>
+            <input type="text" name="tempfolder">
+              <br/><br/><br/>
+            <label for="">Images to Modify</label>
+              <br/><br/>
+            <input type="text" name="newimagesfolder">
+              <br/><br/><br/>
+            <input type="submit" id="submit-save" name="save">
+          </form>
+        </div>
+      </div>
+    </div>
+    <div id="popup-list" class="popup hide">
+      <div class="info">
+        <div class="close">x</div>
+        <div class="words">
+        </div>
+      </div>
+    </div>
+    <h1>HPTO CREATION HELPER</h1>
+    <img class="main loader" src="site-images/loader.gif" alt="">
+    <div id="main_notifications">
+      <span class="words"></span><span class="clear">x</span>
+    </div>
+    <div class="container defaults hide">
+      <section class="settings">
+        <img src="site-images/settings.jpg" alt="">
+        <a target="_blank" href="how-to.html">How To</a>
+      </section>
+      <section class="sheet_info">
+        <div class="">
+          <div class="sheet_id">Sheet Id: <span></span> </div>
+          <div class="sheet_name">Sheet Name: <span></span> </div>
+          <div class="sheet_tab">Sheet Tab: <span></span> </div>
+        </div>
+        <button class="blue" name="options_toggle">Show Sheet Options</button>
+      </section>
+    </div>
+
+    <div class="container options hide">
+      <div class="instructions">
+        <strong>Instructions</strong>: To properly add a sheet you must click the share button on the sheet and add this email address: <span class="email">hpto-node@hpto-1617047136949.iam.gserviceaccount.com</span>, uncheck "Notify People" and choose "can view"
+        <br><br>
+        You can find the sheet id in the sheet's url
+        <br>
+        <img height="50" src="site-images/sheetID.png" />
+      </div>
+      <section>
+        <div class="choose_spreedsheet">
+          <div class="sheet_title"></div>
+          <div class="flex">
+            <div class="choose_sheet flex">
+              <img class="loader" src="site-images/loader.gif" alt="">
+              <select class="hide" name="sheet_id"></select>
+              <!-- <button class="hide" type="button" name="select_sheet">Select Sheet</button> -->
+            </div>
+            <div class="choose_tab flex hide">
+              <img class="loader" src="site-images/loader.gif" alt="">
+              <select class="hide" name="choose_tab"></select>
+              <!-- <button class="hide" type="button" name="select_tab">Select Sheet Tab</button> -->
+            </div>
+          </div>
+        </div>
+        <!-- <button class="blue" name="add_default">Make this default</button> -->
+        <button class="green" name="run_sheet">Run this sheet</button>
+      </section>
+
+      <section>
+        <div class="edit_sheets flex">
+          <div class="add_new_spreedsheet flex">
+            <input type="text" name="sheet_id" value="">
+            <button type="button" name="add_sheet">Add Sheet</button>
+          </div>
+          <div class="delete_spreedsheet flex">
+            <img class="loader" src="site-images/loader.gif" alt="">
+            <select class="hide" name="sheet_id"></select>
+            <button class="hide" type="button" name="delete_sheet">Delete Sheet</button>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="container csv">
+      <section class="csv-checkbox-view">
+        <input class="csv-checkbox" type="checkbox" name="" value=""> Use CSV instead
+      </section>
+      <section class="csv-info hide">
+        <h3>CSV</h3> <span>Upload a CSV to populate the fields below</span>
+        <div class="instructions">
+          <strong>Instructions</strong>: CSV titles must be: <b>"Primary Support","Date","Tier","Playlist","Time of Day","Actual Time (EST)","Headline Copy","Position","Comments","Asset","URI","Interactive Back Ground URI"</b>
+          <br>
+          - Use commas as a delineator
+          <br>
+
+        </div>
+        <div class="csv-func-holder">
+          <form class="csv-upload" method="post" enctype="multipart/form-data" id="formElem">
+            <input type="file" name="fileupload" id="fileupload">
+            <input type="submit">
+          </form>
+          <a class="blue large see_csvs">See CSVs</a>
+        </div>
+      </section>
+    </div>
+
+    <img class="main loader" src="site-images/loader.gif" alt="">
+    <div class="container dedicated hide">
+      <section>
+        <h3>Dedicated Sheet Info</h3> <a class="blue large open_dedicated">open</a>
+        <div>If the sheet info is incorrect, use the google sheet to make updates and refresh</div>
+        <section class="dcells hide"></section>
+      </section>
+      <section class="dedicated_code hide">
+        <span>Upload all code to fasttrack before sending the iframe(s)</span>
+        <br>
+        <div class="code"></div>
+      </section>
+    </div>
+
+    <div class="container cells hide">
+      <section>
+        <h3>Sheet Info</h3> <span>If the sheet info is incorrect, use the google sheet to make updates and refresh</span>
+        <div class="dates flex">
+          <select class="hide" name="choose_date"></select>
+        </div>
+        <img class="loader" src="site-images/loader.gif" alt="">
+        <section class="cells"></section>
+      </section>
+    </div>
+
+    <div class="container images hide">
+      <!-- <section>
+        <h3>Choose a zip file to upload</h3>
+        <form enctype="multipart/form-data" method="post" class="upload-zip" action="">
+          <input type="file" name="zip_file" id="zip_file" />
+          <input class="submit" type="submit" name="submit" value="Upload">
+          <br />
+        </form>
+      </section>
+      <section class="select_zip">
+        <h3>Uploaded Zips</h3>
+        <div class="zips"></div>
+      </section> -->
+      <section class="current_imgs">
+        <h3>Current Images</h3>
+          <div class="">
+            <span>select an image to crop</span>
+            <div class="crop"><div class="holder"></div></div>
+            <div class="buttons">
+              <button class="blue large tooltip" name="gather_images">Login to Gather Images
+                <span class="tooltiptext tooltip-top">Login to box to get access to download images</span>
+              </button>
+              <!-- <button class="blue large tooltip" name="corrected_images">Upload corrected Image
+                <span class="tooltiptext tooltip-top">If a downloaded image looks broken it is probably a tiff. Ask for the sheet to be updated with a jpg or png. Or upload a motified image here.</span>
+              </button> -->
+              <button class="blue large tooltip" name="scrape_images">Scrape Images
+                <span class="tooltiptext tooltip-top">Get urls to all the images in the current sheet info</span>
+              </button>
+              <button class="blue large tooltip" name="update_images">Update Images
+                <span class="tooltiptext tooltip-top">Refresh all images in current images</span>
+              </button>
+              <div class="do_zip">
+                <button class="blue large tooltip" name="create_zip" disabled>Create Zip
+                  <span class="tooltiptext tooltip-top">Create and save zip of all the current images</span>
+                </button>
+                <input type="text" class="zip_name" name="zip_name" value="">
+              </div>
+              <a class="blue large see_zips tooltip">See Zips
+                <span class="tooltiptext tooltip-top">View all saved zips</span>
+              </a>
+              <button class="blue large tooltip" name="reduce_images">Reduce Images
+                <span class="tooltiptext tooltip-top">Make all images 250x250 and move to output folder</span>
+              </button>
+            </div>
+          </div>
+      </section>
+    </div>
+
+    <div class="container dayparts hide">
+      <section>
+        <h3>Choose Daypart Template</h3>
+        <section class="dayparts"></section>
+      </section>
+      <label for="">Add date</label>
+      <input type="text" name="" class="final-date" placeholder="xx-xx-xxxx" value="">
+      <input type="text" name="" class="iteration" placeholder="A" pattern="[A-Z]" maxlength="1" value="">
+      <button class="blue" name="output_code">Get Code</button>
+    </div>
+
+    <div class="container emailcode hide" data-title="">
+      <span>Upload all code to fasttrack before sending the iframe(s)</span>
+      <div class="code"></div>
+      <button class="blue output_txt" name="output_txt">Get iframe text file</button>
+    </div>
+
+    <div class="container output hide">
+      <section>
+        <h3>Copy and paste into html document</h3>
+        <!-- <button class="blue" name="copy">Copy</button> -->
+        <section class="content"><pre><code></code></pre></section>
+        <!-- <button class="blue" name="copy">Copy</button> -->
+      </section>
+
+    </div>
+    <!-- trying to get app to rebuild -->
+    <!-- <script
+  src="https://code.jquery.com/jquery-3.5.1.min.js"
+  integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+  crossorigin="anonymous"></script> -->
+    <script src="/js/croppie.min.js"></script>
+    <script src="/js/script-forCoder.js"></script>
+  </body>
+
+</html>
+
+<!-- client ID
+567763273936-qvl108m91k4545rtoapsef7uecmp4jro.apps.googleusercontent.com
+
+client secret
+t89uSo0NVfTEQIqTBVJikIU0 -->
